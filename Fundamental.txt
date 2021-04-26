@@ -27,3 +27,6 @@ src폴더
 
 buld.gradle :
     dependencies : 포함한 라이브러리 목록들..maveCentral에서 사용
+
+main을 실행 :
+    Spring은 톰캣을 내장하고있다.
