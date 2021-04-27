@@ -30,3 +30,19 @@ buld.gradle :
 
 main을 실행 :
     Spring은 톰캣을 내장하고있다.
+
+3. 라이브러리 살펴보기
+    sysout 은 현업에서 안쓰고, 로그를 사용한다. 오류를확인하기 위해서.
+스프링부트 라이브러리:
+    -spring-boot-starter-web
+        spring-boot-starter-tomcat : 톰캣(웹서버)
+        spring-webmvc : 스프링 웹 MVC
+    -spring-boot-starter-thymeleaf
+        spring-boot-thymelaf: 타임리프 탬플릿 엔진(뷰)
+        logback + slf4ㅓ => spring boot start logging을 쓴다. 기본적으로 들어와있는 것
+테스트 라이브러리:
+    mockiito, assrtj -> test를 편하게 할 수 있도록 도와준다.
+    junit -> 테스트 프레임 워크 , junit ver5 많이쓴다.
+    Gradle은 의존관계가 있는 라이브러리를 함께 다운로드 한다.
+
+
