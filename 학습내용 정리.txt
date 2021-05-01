@@ -92,3 +92,27 @@ cmd를 이용해서 바로 빌드하고 실행할 수 있다.
     변환하여 웹브라우저를 넘겨줌 이것이 동적 모델링
 
 
+8. API
+정적을 제외하고, html, api 두가지 방식이 있다고 생각하자.
+
+@ResponseBody의 의미:
+    문자가 아니라 객체를 그대로 넘긴다고 생각하자.
+    디폴트:
+        JSON방식으로 데이터를 만들어서 요청한 웹브라우저한테 반환한다.
+    HTTP의 body 부분에 return 내용을 직접 입력하겠다는 뜻.
+    소스보기를 하면, return 내용을 그대로 보여준다.
+    html이 아니다.
+
+http://localhost:8080/hello-api?name=%EB%A5%98%EA%B8%B0%ED%83%81
+JSON의 방식이다.
+출력이
+{"name" : ~~}
+인데 key 와 value 방식이다.
+
+xml 보다는 JSON방식이 기본이다.
+
+Getter/ Setter
+ctl + m
+제너레이트를 이용해서
+자바빈 규약이라고 한다.
+private이라서 메소드를 이용해서 가져온다.
