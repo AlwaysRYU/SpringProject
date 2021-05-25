@@ -24,7 +24,7 @@ class MemberServiceTest {
         memberService = new MemberService(memberRepository);
     }
 
-
+    // 끝나고나면 DB값을 날려줌.
     @AfterEach
     public void afterEach() {
         memberRepository.clearStore();
@@ -57,12 +57,12 @@ class MemberServiceTest {
         //when crl alt v
         memberService.join(member1);
         IllegalStateException e = assertThrows(IllegalStateException.class, () -> memberService.join(member2));
-        assertThat(e.getMessage()).isEqualTo("이미 존재하는 회원입니다.");
+        assertThat(e.getMessage()).isEqualTo("이미 존재하는 회원입니다..");
 //        try{
 //            memberService.join(member2);
 //            fail();
 //        } catch (IllegalStateException e){
-//            assertThat(e.getMessage()).isEqualTo("이미존재하는 회원입니다.")
+//            assertThat(e.getMessage()).isEqualTo("이미존재하는 회원입니다..");
 //        }
         //then
     }
