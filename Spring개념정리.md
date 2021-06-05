@@ -36,3 +36,14 @@
   MVC패턴을 사용하면, 사용자 인터페이스와 비즈니스로직을 쉽게 분리하여 개발할 수 있다.   
   서로 영향을 최소화하여 개발 및 변경이 쉬운 애플리케이션을 만들 수 있다.   
   즉, 화면과, 데이터처리를 분리해서 재사용이 가능하게 하는 것이다.
+  
+## 토막 원리
+* ### 스프링이 찾는 우선순위
+  + 요청이 오면 컨트롤러 -> 관련 컨트롤러
+  + 없으면 스태틱 파일을 찾음
+  
+## 겪은 오류들 
+* ### The bean 'memberService', defined in class path resource
+  + 문제 : Spring 실행이 안됨   
+  + 원인 : 버전 차이 스프링 부트 2.1 버전부터는 Bean Override 기능이 불가능하다고한다.
+  + application.property 에 spring.main.allow-bean-definition-overriding=true를 입력함

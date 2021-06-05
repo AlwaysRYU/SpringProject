@@ -11,15 +11,11 @@ import java.util.Optional;
 
 @Service
 public class MemberService {
-
     private final MemberRepository memberRepository;
-
     @Autowired
     public MemberService(MemberRepository memberRepository) {
         this.memberRepository = memberRepository;
     }
-
-
 
     //회원 가입
     public Long join(Member member){
