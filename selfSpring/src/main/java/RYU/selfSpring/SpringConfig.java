@@ -1,6 +1,7 @@
 package RYU.selfSpring;
 
 import RYU.selfSpring.repository.JdbcMemberRepository;
+import RYU.selfSpring.repository.JdbcTemplateMemberRepository;
 import RYU.selfSpring.repository.MemberRepository;
 import RYU.selfSpring.repository.MemoryMemberRepository;
 import RYU.selfSpring.service.MemberService;
@@ -30,7 +31,7 @@ public class SpringConfig {
     @Bean
     public MemberRepository memberRepository() {
 //        return new MemoryMemberRepository();
-        return new JdbcMemberRepository(dataSource);
+        return new JdbcTemplateMemberRepository(dataSource);
 
     }
 

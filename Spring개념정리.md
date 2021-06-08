@@ -64,7 +64,10 @@
   spring.datasource.username=sa
 ```
 
-
+* ### JDBC Template
+  JDBC API에서 바복코드를 제거해준다.   
+  SQL은 작성해야한다.   
+  실무에서도 많이 쓰인다.
 
 ## 6. JPA
 * ### 쿼리없이 데이터를 저장 가능   
