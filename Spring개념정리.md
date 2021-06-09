@@ -69,9 +69,28 @@
   SQL은 작성해야한다.   
   실무에서도 많이 쓰인다.
 
-## 6. JPA
-* ### 쿼리없이 데이터를 저장 가능   
-* ### 스프링 데이터 JPA
+## 6. JPA(Java Persistence Api)
+* #### 스프링 데이터 JPA
+  쿼리없이 데이터를 처리가능하다.   
+  SQL과 데이터 중심의 설계에서 객체 중심의 설계로 패러다임을 전환할 수 있다.   
+  그러므로, 생산성을 크게 높일 수 있다.   
+  myBatis(마이바티스)의 점유율을 따라 잡는 중이다.    
+  Spring과 비슷한 넓이와 깊이가 있는 기술이다. 공부를 제대로 해봐자   
+  인터페이스만 제공을 한다. 표준 인터페이스 같은 느낌   
+  객체와 ORM 기술이다. (객체 - 릴레이셔널 테이블 - 매핑)  
+  
+* #### JPA 설정
+  > application.property 에 다음과 같은 설정 추가
+  > ```{.java}
+  > spring.jpa.show-sql=true
+  > spring.jpa.hibernate.ddl-auto=none
+  > ```
+     
+   
+  > build.gradle에 라이브러리 추가 (dependency에 입력)
+  > implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+
+* #### 아이덴티티
 
 ***
 
