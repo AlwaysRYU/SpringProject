@@ -22,10 +22,18 @@ public class MemberService {
         //중복불가
         //Optional<Member> result = memberRepository.findByName(member.getName());
         //옵셔널반환 , 값이 있으면,
-        validateDuplicateMember(member);
         //단축기 ctl alt m
-        memberRepository.save(member);
-        return member.getId();
+        long start = System.currentTimeMillis();
+
+        try {
+            validateDuplicateMember(member);
+            memberRepository.save(member);
+            return member.getId();
+        } finally {
+            long finish = System.currentTimeMillis();
+            long timeMS = finish - start;
+            System.out.println(timeMS);
+        }
         //지금은 아이디만
     }
 
